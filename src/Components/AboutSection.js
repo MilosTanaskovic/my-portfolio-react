@@ -3,6 +3,7 @@ import React from 'react'
 import Img from '../img/About/MilosTanaskovic.jpg';
 // Styled
 import styled from 'styled-components';
+import { Styled_About, Styled_Description, Styled_Image, Styled_Hide } from './StyledAbout';
 const AboutSection = () => {
  return (
   <Styled_About>
@@ -31,33 +32,6 @@ const AboutSection = () => {
   </Styled_About>
  )
 }
-// Styled Components
-const Styled_About = styled.div`
- min-height: 90vh;
- display: flex;
- align-items: center;
- justify-content: space-between;
- padding: 5rem 10rem;
- color: white;
-`;
-const Styled_Description = styled.div`
- flex: 1;
- padding-right: 5rem;
- h2{
-  font-weight:lighter;
- }
-`;
-const Styled_Image = styled.div`
- flex: 1;
- overflow: hidden;
- img{
-  width: 100%;
-  height: 80vh;
-  object-fit: cover;
- }
-`;
-const Styled_Hide = styled.div`
- overflow: hidden;
-`;
+
 
 export default AboutSection
