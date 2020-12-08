@@ -4,7 +4,7 @@ import clock from '../img/About/clock.svg';
 import diaphragm from '../img/About/diaphragm.svg';
 import money from '../img/About/money.svg';
 import teamwork from '../img/About/teamwork.svg';
-import home2 from '../img/About/home2.png'
+import home2 from '../img/About/services-js.jpg';
 // Styles
 import styled from 'styled-components';
 import { Styled_About, Styled_Description, Styled_Image } from './StyledAbout';
