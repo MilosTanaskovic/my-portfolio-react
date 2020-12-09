@@ -1,7 +1,7 @@
 import React from 'react'
 // import styled
 import styled from 'styled-components';
-// Router
+
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
