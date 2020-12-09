@@ -3,13 +3,21 @@ import React from 'react'
 import AboutSection from '../Components/AboutSection';
 import AboutServices from '../Components/AboutServices';
 import AboutFAQ from '../Components/AboutFAQ';
+// animations
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 const AboutMe = () => {
  return (
-  <div className="about">
+  <motion.div 
+  variants={pageAnimation}
+  initial="hidden"
+  animate="show"
+  exit="exit"
+  >
    <AboutSection />
    <AboutServices />
    <AboutFAQ />
-  </div>
+  </motion.div>
  )
 }
 

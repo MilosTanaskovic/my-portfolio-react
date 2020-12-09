@@ -1,6 +1,9 @@
 import React,{ useState, useEffect } from 'react'
 
 import styled from 'styled-components';
+// Animation
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 
 // import Components/Project
 import HeadLine from '../Components/Project/HeadLine';
@@ -25,7 +28,12 @@ const ProjectDetails = () => {
   <>
   { 
    project && (
-     <Styled_ProjectDetails>
+     <Styled_ProjectDetails 
+     variants={pageAnimation}
+     initial="hidden"
+     animate="show"
+     exit="exit"
+     >
       <HeadLine project={project}/>
       <Styled_Awards>
        {project.awards.map((award) => ( 
@@ -43,7 +51,7 @@ const ProjectDetails = () => {
  );
 };
 
-const Styled_ProjectDetails = styled.div`
+const Styled_ProjectDetails = styled(motion.div)`
  color: white;
 
 `;

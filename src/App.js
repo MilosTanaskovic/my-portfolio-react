@@ -9,14 +9,18 @@ import MyWork from './Pages/MyWork';
 import ContactMe from './Pages/ContactMe';
 import ProjectDetails from './Pages/ProjectDetails';
 // Router
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 function App() {
+  const location = useLocation();
+  console.log(location);
   return (
     <div className="App">
       <GlobalStyle/>
       <Nav/>
-      <h1>Dancing With The React!!!</h1>
-      <Switch>
+
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.path}>
         <Route path="/" exact>
           <AboutMe />
         </Route>
@@ -29,7 +33,8 @@ function App() {
         <Route path="/contact">
           <ContactMe />
         </Route>
-      </Switch>
+       </Switch>
+      </AnimatePresence>
     </div>
   );
 }

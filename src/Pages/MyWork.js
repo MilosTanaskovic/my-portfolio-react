@@ -8,15 +8,23 @@ import netflix from '../img/Projects/img/netflix-clone-background.png';
 import leomovies from '../img/Projects/img/LeoMovies-proj.png';
 // Projects
 //import NetflixCloneReact from '../Components/Projects/NetflixClone';
-
+// animations
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 const MyWork = () => {
  return (
-  <Styled_Work>
+  <Styled_Work 
+   variants={pageAnimation}
+   initial="hidden"
+   animate="show"
+   exit="exit"
+   style={{background: '#fff'}}
+   >
    {/* Project 1 */}
    <Styled_Project>
     <h2>The Netflix Clone</h2>
     <div className="line"></div>
-    <Link>
+    <Link to="/work/netflix-clone-react">
      <img src={netflix} alt="Netflix Clone Project React"/>
     </Link>
    </Styled_Project>
@@ -25,7 +33,7 @@ const MyWork = () => {
    <Styled_Project>
     <h2>The LeoMovies</h2>
     <div className="line"></div>
-    <Link>
+    <Link to="/work/netflix-clone-react">
      <img src={leomovies} alt="LeoMovies Project React"/>
     </Link>
    </Styled_Project>
@@ -34,7 +42,7 @@ const MyWork = () => {
  )
 };
 
-const Styled_Work = styled.div`
+const Styled_Work = styled(motion.div)`
  min-height: 100vh;
  overflow: hidden;
  padding: 5rem 10rem;
