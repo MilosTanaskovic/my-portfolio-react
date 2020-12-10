@@ -10,7 +10,7 @@ import leomovies from '../img/Projects/img/LeoMovies-proj.png';
 //import NetflixCloneReact from '../Components/Projects/NetflixClone';
 // animations
 import { motion } from 'framer-motion';
-import { pageAnimation } from '../animation';
+import { pageAnimation, fade, photoAnim, lineAnim, sliderAnim, sliderContainer } from '../animation';
 const MyWork = () => {
  return (
   <Styled_Work 
@@ -19,13 +19,26 @@ const MyWork = () => {
    animate="show"
    exit="exit"
    style={{background: '#fff'}}
-   >
+  >
+   <motion.div variants={sliderContainer}>
+    <Styled_Frame1 
+    variants={sliderAnim}></Styled_Frame1>
+   <Styled_Frame2 
+    variants={sliderAnim}></Styled_Frame2>
+   <Styled_Frame3 
+    variants={sliderAnim}></Styled_Frame3>
+   <Styled_Frame4 
+    variants={sliderAnim}></Styled_Frame4>
+   </motion.div>
+   
    {/* Project 1 */}
    <Styled_Project>
-    <h2>The Netflix Clone</h2>
-    <div className="line"></div>
+    <motion.h2 variants={fade}>The Netflix Clone</motion.h2>
+    <motion.div variants={lineAnim} className="line"></motion.div>
     <Link to="/work/netflix-clone-react">
-     <img src={netflix} alt="Netflix Clone Project React"/>
+     <Styled_Hide>
+      <motion.img variants={photoAnim} src={netflix} alt="Netflix Clone Project React"/>
+     </Styled_Hide>
     </Link>
    </Styled_Project>
    {/* End Project 1 */}
@@ -55,7 +68,7 @@ const Styled_Project = styled.div`
  padding-bottom: 10rem;
  .line{
   height: 0.5rem;
-  background: #cccccc;
+  background: #23d997;
   margin-bottom: 3rem;
  }
  img {
@@ -63,5 +76,26 @@ const Styled_Project = styled.div`
   height: 70vh;
   //object-fit: cover;
  }
+`;
+const Styled_Hide = styled.div`
+ overflow: hidden;
+`;
+const Styled_Frame1 = styled(motion.div)`
+ position: fixed;
+ left: 0;
+ top: 10%;
+ width: 100%;
+ height: 100vh;
+ background: #fffebf;
+ z-index: 2;
+`;
+const Styled_Frame2 = styled(Styled_Frame1)`
+ background: #ff8efb;
+`;
+const Styled_Frame3 = styled(Styled_Frame1)`
+ background: #8ed2ff;
+`;
+const Styled_Frame4 = styled(Styled_Frame1)`
+ background: #8effa0;
 `;
 export default MyWork

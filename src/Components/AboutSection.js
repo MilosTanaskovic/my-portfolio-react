@@ -1,34 +1,49 @@
 import React from 'react'
 // import img
 import Img from '../img/About/MilosTanaskovic.jpg';
+import Wave from './Wave';
 // Styled
 import styled from 'styled-components';
 import { Styled_About, Styled_Description, Styled_Image, Styled_Hide } from './StyledAbout';
+// Animation
+import {motion} from 'framer-motion';
+import {titleAnim, fade, photoAnim} from '../animation';
 const AboutSection = () => {
  return (
   <Styled_About>
     <Styled_Description>
-    <div className="title">
+    <motion.div>
      <Styled_Hide>
-      <h2>We work to make</h2>
+      <motion.h2
+        variants={titleAnim}
+      >We work to make</motion.h2>
      </Styled_Hide>
      <Styled_Hide>
-      <h2>
+      <motion.h2
+      variants={titleAnim}
+      >
        your <span>dreams</span> come
-      </h2>
+      </motion.h2>
      </Styled_Hide>
      <Styled_Hide>
-      <h2>true.</h2>
+      <motion.h2
+      variants={titleAnim}
+      >true.</motion.h2>
      </Styled_Hide>
-    </div>
-    <p>
+    </motion.div>
+    <motion.p
+    variants={fade}
+    >
      Conatct me for any task or proggraming idea have professional with amazing skills.
-    </p>
-    <button>Contact Me</button>
+    </motion.p>
+    <motion.button 
+    variants={fade}
+    >Contact Me</motion.button>
    </Styled_Description>
    <Styled_Image>
-    <img src={Img} width={200} height={200} alt="Image Milos Tanaskovic"/>
+    <motion.img variants={photoAnim} src={Img} style={{width:'200', height:'200'}}  alt="Image Milos Tanaskovic"/>
    </Styled_Image>
+   <Wave/>
   </Styled_About>
  )
 }

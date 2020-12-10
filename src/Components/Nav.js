@@ -8,7 +8,7 @@ const Nav = () => {
  return (
   <Styled_Nav>
    <h1>
-    <Link id="logo" to="/">CodeDancing</Link>
+    <Link id="logo" to="/">ReactDancing</Link>
    </h1>
    <ul>
     <li>

@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
 const AboutMe = () => {
  return (
-  <motion.div 
+ <motion.div 
   variants={pageAnimation}
   initial="hidden"
   animate="show"
