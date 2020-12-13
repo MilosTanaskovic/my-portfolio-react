@@ -2,50 +2,50 @@ import React from 'react'
 // import srtyled
 import styled from 'styled-components';
 import { Styled_About } from './StyledAbout';
+import { AnimateSharedLayout } from 'framer-motion';
+// import toggle component
+import Toggle from "./Toggle";
+// Scroll Animation
+import { useScroll } from './useScroll';
+import { scrollReveal } from '../animation';
 
 const AboutFAQ = () => {
+  const [element, controls] = useScroll();
  return (
-  <Styled_FAQ>
+  <Styled_FAQ 
+    variants={scrollReveal}
+    animate={controls}
+    initial="hidden"
+    ref={element}
+    >
    <h2>Any question <span>FAQ</span></h2>
-   <div className="question">
-    <h4>How Do I Start?</h4>
-    <div className="answer">
+   <AnimateSharedLayout>
+    <Toggle title="How Do I Start?">
      <p>sadsadasd</p>
      <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dignissimos veritatis voluptatum aliquam beatae quidem non maiores totam. Maiores iusto eius nisi, enim facere quidem fugiat quo. Sapiente, quis illum?
      </p>
-    </div>
-    <div className="faq-line"></div>
-   </div>
-   <div className="question">
-    <h4>Daily Schedule</h4>
-    <div className="answer">
+   </Toggle>
+   <Toggle title="Daily Schedule?">
      <p>sadsadasd</p>
      <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dignissimos veritatis voluptatum aliquam beatae quidem non maiores totam. Maiores iusto eius nisi, enim facere quidem fugiat quo. Sapiente, quis illum?
      </p>
-    </div>
-    <div className="faq-line"></div>
-   </div>
-   <div className="question">
-    <h4>My Work experince</h4>
-    <div className="answer">
+   </Toggle>
+   <Toggle title="My Work experince?">
      <p>sadsadasd</p>
      <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dignissimos veritatis voluptatum aliquam beatae quidem non maiores totam. Maiores iusto eius nisi, enim facere quidem fugiat quo. Sapiente, quis illum?
      </p>
-    </div>
-    <div className="faq-line"></div>
-   </div>
-   <div className="question">
-    <h4>What product do you offer.</h4>
-    <div className="answer">
+   </Toggle>
+   <Toggle title="What product do you offer?">
      <p>sadsadasd</p>
      <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dignissimos veritatis voluptatum aliquam beatae quidem non maiores totam. Maiores iusto eius nisi, enim facere quidem fugiat quo. Sapiente, quis illum?
      </p>
-    </div>
-   </div>
+   </Toggle>
+   </AnimateSharedLayout>
+  
   </Styled_FAQ>
  )
 }

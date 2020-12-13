@@ -8,10 +8,17 @@ import home2 from '../img/About/services-js.jpg';
 // Styles
 import styled from 'styled-components';
 import { Styled_About, Styled_Description, Styled_Image } from './StyledAbout';
+import { scrollReveal } from '../animation';
+import { useScroll } from './useScroll';
 
 const AboutServices = () => {
+ const [element, controls] = useScroll();
  return (
-  <Styled_Services>
+  <Styled_Services 
+   variants={scrollReveal} 
+   animate={controls} 
+   initial="hidden"
+   ref={element}>
    {/* Description Section */}
    <Styled_Description>
    <h2>
