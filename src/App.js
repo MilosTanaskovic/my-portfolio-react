@@ -11,12 +11,15 @@ import ProjectDetails from './Pages/ProjectDetails';
 // Router
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+// ScrollTop
+import ScrollTop from './Components/ScrollTop';
 function App() {
   const location = useLocation();
   console.log(location);
   return (
     <div className="App">
       <GlobalStyle/>
+      <ScrollTop/>
       <Nav/>
 
       <AnimatePresence exitBeforeEnter>

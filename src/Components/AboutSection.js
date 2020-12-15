@@ -1,4 +1,6 @@
 import React from 'react'
+// Link
+import {Link} from 'react-router-dom';
 // import img
 import Img from '../img/About/MilosTanaskovic.jpg';
 import Wave from './Wave';
@@ -36,9 +38,9 @@ const AboutSection = () => {
     >
      Conatct me for any task or proggraming idea have professional with amazing skills.
     </motion.p>
-    <motion.button 
-    variants={fade}
-    >Contact Me</motion.button>
+    <Link to="/contact">
+      <motion.button variants={fade}>Contact Me</motion.button>
+    </Link>
    </Styled_Description>
    <Styled_Image>
     <motion.img variants={photoAnim} src={Img} style={{width:'200', height:'200'}}  alt="Image Milos Tanaskovic"/>
