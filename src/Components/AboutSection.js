@@ -18,7 +18,7 @@ const AboutSection = () => {
      <Styled_Hide>
       <motion.h2
         variants={titleAnim}
-      >We work to make</motion.h2>
+      >I work to make</motion.h2>
      </Styled_Hide>
      <Styled_Hide>
       <motion.h2
@@ -36,7 +36,7 @@ const AboutSection = () => {
     <motion.p
     variants={fade}
     >
-     Conatct me for any task or proggraming idea have professional with amazing skills.
+     Contact me for any task or programming idea have a professional with amazing skills.
     </motion.p>
     <Link to="/contact">
       <motion.button variants={fade}>Contact Me</motion.button>

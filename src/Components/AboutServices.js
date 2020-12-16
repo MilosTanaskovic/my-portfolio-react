@@ -49,7 +49,7 @@ const AboutServices = () => {
     <Styled_Card>
      <div className="icon">
       <img src={money} alt="sevices money"/>
-      <h3>Money</h3>
+      <h3>Save money</h3>
      </div>
      <p>Lorem ipsum dolor sit amet, consectetur adipisicing </p>
     </Styled_Card>
@@ -75,7 +75,7 @@ const Styled_Services = styled(Styled_About)`
 const Styled_Cards = styled.div`
  display: flex;
  flex-wrap: wrap;
- @media (max-width: 1300px){
+ @media (max-width: 1100px){
   justify-content: center;
  }
 `;

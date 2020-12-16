@@ -20,28 +20,40 @@ const AboutFAQ = () => {
     >
    <h2>Any question <span>FAQ</span></h2>
    <AnimateSharedLayout>
-    <Toggle title="How Do I Start?">
-     <p>sadsadasd</p>
+    <Toggle title="Who is Milos Tanaskovic? 🤗">
+     <p>React | Redux | JavaScript | Frontend developer - lifelong student and a creative</p>
      <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dignissimos veritatis voluptatum aliquam beatae quidem non maiores totam. Maiores iusto eius nisi, enim facere quidem fugiat quo. Sapiente, quis illum?
+      Hi! I'm a Frontend developer with previous skills as team leader in both service and security! I'm a creative person who thinks code is an amazing tool! I love to work with people and now i want to work with code to create smart, efficient products and websites to help people in their everyday life.
      </p>
    </Toggle>
-   <Toggle title="Daily Schedule?">
+   <Toggle title="My Work experince? ⚙️">
      <p>sadsadasd</p>
      <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dignissimos veritatis voluptatum aliquam beatae quidem non maiores totam. Maiores iusto eius nisi, enim facere quidem fugiat quo. Sapiente, quis illum?
+      As mentioned in my CV I am a front-end web developer with 3 years of hands-on experience in coding efficiently websites and applications using modern HTML5, CSS3, SASS, LESS, JavaScript/ES6+,React.js RESTful APIs, JSON, Git, Babel, Webpack. I was employed in Svenska Domaner company from December 2018, where I’ve been in charge of maintaining entire front-end part of company’s website on my own. The company is selling web hostings and domains as well as offering customers to create their own websites or blogs via Weebly, WordPress, One-click installer. I was successfully working and collaborating with sales digital managers, web designer and software developer. Here I’ve learned that having a highly collaborative team is a great advantage of each company. Every interaction brings new knowledge, ideas and solutions. Apart from evolving and improving in my coding field of interest, I’ve been exposed and learned a lot about sales, marketing strategies, how to create campaign, how to launch a product. 
      </p>
    </Toggle>
-   <Toggle title="My Work experince?">
-     <p>sadsadasd</p>
+   <Toggle title="What is your technical strength? 🛠️">
+     <p>TECH</p>
      <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dignissimos veritatis voluptatum aliquam beatae quidem non maiores totam. Maiores iusto eius nisi, enim facere quidem fugiat quo. Sapiente, quis illum?
+      HTML, CSS, FLexbox, JavaScript , React , Redux, API:s, Node.js, Mongo DB, Web Accessibly, Mob-programming, Pair-programming, Github , Figma.
      </p>
    </Toggle>
-   <Toggle title="What product do you offer?">
-     <p>sadsadasd</p>
+   <Toggle title="What is your skills and abilities?">
+     <p>CODE 👨🏻‍💻</p>
      <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dignissimos veritatis voluptatum aliquam beatae quidem non maiores totam. Maiores iusto eius nisi, enim facere quidem fugiat quo. Sapiente, quis illum?
+      React, React Hooks, Redux, Javascript/ES6+, HTML5, CSS3/SASS, Node.js, GitHub
+     </p>
+     <p>TOOLBOX 🧰</p>
+     <p>
+      VS code | Slack | Figma | Stackoverflow
+     </p>
+     <p>UPCOMING 🚀</p>
+     <p>
+      Next.js | Mongo DB
+     </p>
+     <p>MORE 🎁</p>
+     <p>
+      Team Player | Agile Methods | Pair-programming | Mob-programming | Web Accessibility | Remote Work
      </p>
    </Toggle>
    </AnimateSharedLayout>

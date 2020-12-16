@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box
 }
 html{
-    @media (max-width: 1700px){
+    @media (max-width: 1300px){
         font-size: 75%;
     }
     

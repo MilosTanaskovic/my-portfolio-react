@@ -9,7 +9,7 @@ const Nav = () => {
  return (
   <Styled_Nav>
    <h1>
-    <Link id="logo" to="/">ReactDancing</Link>
+    <Link id="logo" to="/">MilosT  ? 'ReactDancing' : 'Frontend Dev'</Link>
    </h1>
    <ul>
     <li>
@@ -17,7 +17,7 @@ const Nav = () => {
      <Styled_Line 
       transition={{duration: 0.75}}
       initial={{width: "0%"}}
-      animate={{width: pathname === '/' ? '50%' : '0%'}}
+      animate={{width: pathname === '/' ? '70%' : '0%'}}
       />
     </li>
     <li>
@@ -25,7 +25,7 @@ const Nav = () => {
      <Styled_Line 
       transition={{duration: 0.75}}
       initial={{width: "0%"}}
-      animate={{width: pathname === '/work' ? '50%' : '0%'}}
+      animate={{width: pathname === '/work' ? '70%' : '0%'}}
       />
      </li>
     <li>
@@ -33,7 +33,7 @@ const Nav = () => {
      <Styled_Line 
       transition={{duration: 0.75}}
       initial={{width: "0%"}}
-      animate={{width: pathname === '/contact' ? '50%' : '0%'}}
+      animate={{width: pathname === '/contact' ? '70%' : '0%'}}
       />
     </li>
    </ul>
@@ -67,10 +67,10 @@ const Styled_Nav = styled.nav`
   font-weight: lighter;
  }
  li{
-  padding-left: 10rem;
+  padding-left: 3rem;
   position: relative;
  }
- @media (max-width: 1300px){
+ @media (max-width: 900px){
   flex-direction: column;
   padding: 2rem 1rem;
   #logo {
@@ -94,8 +94,11 @@ const Styled_Line = styled(motion.div)`
  position: absolute;
  bottom: -80%;
  left: 60%;
- @media (max-width: 1300px){
+ @media (max-width: 900px){
    left: 0%;
+  }
+  @media (min-width: 900px){
+   left: 33%;
   }
 `;
 export default Nav
