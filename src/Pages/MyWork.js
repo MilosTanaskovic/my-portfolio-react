@@ -6,6 +6,9 @@ import styled from 'styled-components';
 // Img
 import netflix from '../img/Projects/img/netflix-clone-background.png';
 import leomovies from '../img/Projects/img/LeoMovies-proj.png';
+import modernmusicapp from '../img/Projects/img/modern-music-app.png';
+import todoapp from '../img/Projects/img/todo-app-react-1.png';
+import framermetionanimation from '../img/Projects/img/framer-metion-animation.png';
 // Projects
 //import NetflixCloneReact from '../Components/Projects/NetflixClone';
 // animations
@@ -15,6 +18,9 @@ import { useScroll } from '../Components/useScroll';
 const MyWork = () => {
  const [element, controls] = useScroll();
  const [element2, controls2] = useScroll();
+ const [element3, controls3] = useScroll();
+ const [element4, controls4] = useScroll();
+ const [element5, controls5] = useScroll();
  return (
   <Styled_Work 
    variants={pageAnimation}
@@ -66,13 +72,41 @@ const MyWork = () => {
     initial="hidden"
     ref={element2}
    >
-    <h2>The LeoMovies</h2>
+    <h2>The Modern Music App</h2>
     <motion.div variants={lineAnim} className="line"></motion.div>
-    <Link to="/work/netflix-clone-react">
-     <img src={leomovies} alt="LeoMovies Project React"/>
+    <Link to="/work/modern-music-app">
+     <img src={modernmusicapp} alt="Modern Music Project React"/>
     </Link>
    </Styled_Project>
    {/* End Project 3 */}
+   {/* Project 4 */}
+   <Styled_Project
+    variants={fade}
+    animate={controls3}
+    initial="hidden"
+    ref={element3}
+   >
+    <h2>The Todo App</h2>
+    <motion.div variants={lineAnim} className="line"></motion.div>
+    <Link to="/work/modern-music-app">
+     <img src={todoapp} alt="Todo Project React"/>
+    </Link>
+   </Styled_Project>
+   {/* End Project 4 */}
+   {/* Project 5 */}
+   <Styled_Project
+    variants={fade}
+    animate={controls4}
+    initial="hidden"
+    ref={element4}
+   >
+    <h2>The Todo App</h2>
+    <motion.div variants={lineAnim} className="line"></motion.div>
+    <Link to="/work/modern-music-app">
+     <img src={framermetionanimation} alt="Todo Project React"/>
+    </Link>
+   </Styled_Project>
+   {/* End Project 5 */}
   </Styled_Work>
  )
 };
@@ -98,7 +132,7 @@ const Styled_Project = styled(motion.div)`
  img {
   width: 100%;
   height: 70vh;
-  //object-fit: cover;
+  object-fit: cover;
  }
 `;
 const Styled_Hide = styled.div`

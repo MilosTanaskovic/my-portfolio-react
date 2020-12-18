@@ -1,13 +1,24 @@
 import React from 'react'
+// Icons
 // Animation
-import { motion } from 'framer-motion';
-import { pageAnimation, titleAnim } from '../animation';
+import { motion, AnimateSharedLayout } from 'framer-motion';
+import { pageAnimation, titleAnim, scrollReveal } from '../animation';
 import styled from 'styled-components';
-
-const ContactMe = () => {
+import ToggleContact from '../Components/ToggleContact';
+import { Link } from 'react-router-dom';
+const ContactMe = (props) => {
+  const {FontAwesomeIcon,
+        faFacebookF,
+        faLinkedin,
+        faFacebookMessenger,
+        faWhatsapp,
+        faTelegram,
+        faInstagram,
+        faGithub,
+        faStackOverflow} = props;
  return (
   <Styled_Contact
-   variants={pageAnimation}
+   variants={scrollReveal}
    initial="hidden"
    animate="show"
    exit="exit"
@@ -17,29 +28,61 @@ const ContactMe = () => {
     <Styled_Hide>
      <motion.h2
       variants={titleAnim}
-     
      >Get in touch</motion.h2>
     </Styled_Hide>
    </Styled_Title>
    <div>
+   <AnimateSharedLayout>
     <Styled_Hide>
      <Styled_Social variants={titleAnim}>
       <Styled_Circle/>
-      <h2>Send Me A Message</h2>
+      <ToggleContact title="Send Me A Message">
+       <a target="_blank" href="https://www.linkedin.com/in/milos-tanaskovic-codedancing-619742130/">
+        <Styled_Icon><FontAwesomeIcon icon={faLinkedin} /></Styled_Icon>
+       </a>
+       <a target="_blank" href="https://www.facebook.com/messages/t/101285751393004">
+        <Styled_Icon><FontAwesomeIcon icon={faFacebookMessenger} /></Styled_Icon>
+       </a>
+       <a target="_blank" href="https://www.linkedin.com/in/milos-tanaskovic-codedancing-619742130/">
+        <Styled_Icon><FontAwesomeIcon icon={faWhatsapp} /></Styled_Icon>
+       </a>
+       <a target="_blank" href="https://t.me/DancingWithThCode">
+        <Styled_Icon><FontAwesomeIcon icon={faTelegram} /></Styled_Icon>
+       </a>
+      </ToggleContact>
      </Styled_Social>
     </Styled_Hide>
+    </AnimateSharedLayout>
     <Styled_Hide>
      <Styled_Social variants={titleAnim}>
       <Styled_Circle/>
-      <h2>Send an email</h2>
+      <Styled_Alink href={"mailto:milos@tanaskovic.se"}><h2>Send an email</h2></Styled_Alink>
      </Styled_Social>
     </Styled_Hide>
+    <AnimateSharedLayout>
     <Styled_Hide>
      <Styled_Social variants={titleAnim}>
       <Styled_Circle/>
-      <h2>Social Media</h2>
+      <ToggleContact title="Social Media">
+       <a target="_blank" href="https://www.linkedin.com/in/milos-tanaskovic-codedancing-619742130/">
+        <Styled_Icon><FontAwesomeIcon icon={faLinkedin} /></Styled_Icon>
+       </a>
+       <a target="_blank" href="https://github.com/MilosTanaskovic">
+        <Styled_Icon><FontAwesomeIcon icon={faGithub} /></Styled_Icon>
+       </a>
+       <a target="_blank" href="https://stackoverflow.com/users/story/11797438">
+        <Styled_Icon><FontAwesomeIcon icon={faStackOverflow} /></Styled_Icon>
+       </a>
+       <a target="_blank" href="https://www.facebook.com/codedancing">
+        <Styled_Icon><FontAwesomeIcon icon={faFacebookF} /></Styled_Icon>
+       </a>
+       <a target="_blank" href="https://www.instagram.com/codedancingup/">
+        <Styled_Icon><FontAwesomeIcon icon={faInstagram} /></Styled_Icon>
+       </a>
+      </ToggleContact>
      </Styled_Social>
     </Styled_Hide>
+    </AnimateSharedLayout>
    </div>
   </Styled_Contact>
  )
@@ -77,6 +120,15 @@ const Styled_Social = styled(motion.div)`
  h2{
   margin: 2rem;
  }
+`;
+const Styled_Icon = styled.span`
+ font-size: 3rem;
+ color: #353535;
+ padding-left: 2.5rem;
+`;
+const Styled_Alink = styled.a`
+  color: #353535;
+  text-decoration: none;
 `;
 
 export default ContactMe
