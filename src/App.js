@@ -1,7 +1,7 @@
 import React from 'react'
 // FontAwsomeIcons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faFacebookF , faLinkedin, faFacebookMessenger, faWhatsapp, faTelegram, faInstagram, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
+import {  faFacebookF , faLinkedin, faFacebookMessenger, faWhatsapp, faTelegram, faInstagram, faGithub, faStackOverflow, faHtml5, faCss3, faSass, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
 import {faCopyright, faTrademark} from '@fortawesome/free-solid-svg-icons'
 // Global Style
 import GlobalStyle from './Components/GlobalStyle';

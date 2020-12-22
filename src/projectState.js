@@ -4,6 +4,14 @@ import leomovie from './img/Projects/img/LeoMovies-proj.png';
 // video-demo
 import netflixclonevideo from './img/Projects/video/Bela-Ciao-2.mp4';
 //import netflixclonevideo from './img/Projects/video/video.mp4';
+// Link
+const linkNetflixClone = "https://netflix-clone-react-b8c3d.web.app/?fbclid=IwAR29uO-_9OsluvYiz-9qmrKOkWWpiBahSvzQZyCTzDVM-GzvKyhgQLo1CGA";
+const githubNetflixClone = "https://github.com/MilosTanaskovic/Netflix-Clone-With-React_JS";
+// Skills Icons
+const materialUI = 'https://uploads-ssl.webflow.com/5cf020f0e1695d04b984df8a/5d544de96e496119130834f3_material-ui-logo.svg';
+const reactJS = 'https://uploads-ssl.webflow.com/5cf020f0e1695d04b984df8a/5d31ecb437c5c8f9b6b08d43_react.svg';
+const reduxJS = 'https://uploads-ssl.webflow.com/5cf020f0e1695d04b984df8a/5d31ecf57b296b858f22da78_redux.svg';
+
 
 export const ProjectState = () => {
  return [
@@ -14,56 +22,117 @@ export const ProjectState = () => {
    overviews: [
     {
      title: 'Project Overview',
-     description: 'Sugarstone is a web application that offers easy file management of a large archive of documents that can be easily accessed and searched digitally. It also incorporates document scanning functionality which enables fast and easy search for specific content in the document.'
+     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aliquam perspiciatis consequuntur commodi fugiat itaque, reiciendis eos, dolorem voluptatibus, quisquam ullam quae dolorum quos magnam? Eum deleniti dignissimos fuga sed!'
     },
     {
      title: 'My Contributions',
-     description: 'As a lead UX & UI Designer, I took responsibility for designing a file management system that is familiar and easy to use. Apart from interviewing, sketching, wireframing, low & high-fidelity prototyping I take a big part in the development process.'
+     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aliquam perspiciatis consequuntur commodi fugiat itaque, reiciendis eos, dolorem voluptatibus, quisquam ullam quae dolorum quos magnam? Eum deleniti dignissimos fuga sed!'
     }
    ],
    video_demos: [
     {
      title: 'Demo Netflix Clone',
-     link: 'Open demo in new Window or try it down below',
+     demolink: linkNetflixClone,
      video: netflixclonevideo,
+     githublink: githubNetflixClone,
      poster: netflixclone,
     }
    ],
-   awards: [
-    {
-     title: 'Name of Firm',
-     date: '11/11/2020 - 12/12/2020'
-    },
-    {
-     description: 'sadadsadsadasd'
-    }
-   ],
+   // awards: [
+   //  {
+   //   title: 'Name of Firm',
+   //   date: '11/11/2020 - 12/12/2020 date from to contribute with them',
+   //  },
+   //  {
+   //   description: 'sadadsadsadasd'
+   //  }
+   // ],
+   
    developments: [
     {
-     designs: [
-      {
-       title: 'UX/UI Design',
-       description: 'ghgjhh',
-       skills: ''
-      },
-     ],
+     // designs: [
+     //  {
+     //   title: 'UX/UI Design',
+     //   description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aliquam perspiciatis consequuntur commodi fugiat itaque, reiciendis eos, dolorem voluptatibus, quisquam ullam quae dolorum quos magnam? Eum deleniti dignissimos fuga sed!',
+     //   skills: ''
+     //  },
+     // ],
      frontends: [
       {
-       title: 'Front-end development',
-       description: 'adsadsad',
-       skills: '',
+       title: 'Front-end development 🚀',
+       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aliquam perspiciatis consequuntur commodi fugiat itaque, reiciendis eos, dolorem voluptatibus, quisquam ullam quae dolorum quos magnam? Eum deleniti dignissimos fuga sed!',
+       skills: [
+        {
+         image: reactJS,
+         name: 'React'
+        },
+        {
+         image: materialUI,
+         name: 'Material UI'
+        },
+        {
+         image: reduxJS,
+         name: 'Redux'
+        }
+        
+       ],
       }
      ],
      backends: [
       {
-       title: 'Front-end development',
-       description: 'adsadsad',
-       skills: '',
+       title: 'Back-end development 👨🏻‍💻',
+       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aliquam perspiciatis consequuntur commodi fugiat itaque, reiciendis eos, dolorem voluptatibus, quisquam ullam quae dolorum quos magnam? Eum deleniti dignissimos fuga sed!',
+       skills: [
+        {
+         image: reactJS,
+         name: 'React'
+        },
+        {
+         image: materialUI,
+         name: 'Material UI'
+        }
+       ],
       }
      ],
      tools: [
       {
-
+       title: 'Development Tools 🧰',
+       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aliquam perspiciatis consequuntur commodi fugiat itaque, reiciendis eos, dolorem voluptatibus, quisquam ullam quae dolorum quos magnam? Eum deleniti dignissimos fuga sed!',
+       skills: [
+        {
+         image: reactJS,
+         name: 'React'
+        },
+        {
+         image: materialUI,
+         name: 'Material UI'
+        },
+        {
+         image: reduxJS,
+         name: 'Redux'
+        },
+         {
+         image: reduxJS,
+         name: 'Redux'
+        },
+        {
+         image: reactJS,
+         name: 'React'
+        },
+        {
+         image: materialUI,
+         name: 'Material UI'
+        },
+        {
+         image: reduxJS,
+         name: 'Redux'
+        },
+         {
+         image: reduxJS,
+         name: 'Redux'
+        }
+        
+       ],
       }
      ],
     },

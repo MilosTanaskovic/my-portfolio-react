@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
 
-// import Components/Project
+// Import Components/Project
 import HeadLine from '../Components/Project/HeadLine';
 import Award from '../Components/Project/Award';
 import Overview  from '../Components/Project/Overview';
@@ -29,7 +29,10 @@ const ProjectDetails = (props) => {
   const currentProject = projects.filter((stateProject) => stateProject.url === url);
   setProject(currentProject[0]);
  }, [projects, url]);
-
+ 
+ const mystyle = {
+      display: 'none'
+    };
  return (
   <>
   { 
@@ -56,29 +59,37 @@ const ProjectDetails = (props) => {
       {project.video_demos.map((video_demo) => (
         <Video_Demo 
         title={video_demo.title}
-        link={video_demo.link}
+        demolink={video_demo.demolink}
         video={video_demo.video}
+        githublink = {video_demo.githublink}
         poster={video_demo.poster}
         />
       ))}
       {/** Awards Section */}
-      <Styled_Awards>
-       {project.awards.map((award) => ( 
-       <Award 
-        title={award.title} 
-        description={award.description} 
-        key={award.title}
-       />
-      ))}
-      </Styled_Awards>
+      {project.awards && (
+        <Styled_Awards>
+          {project.awards.map((award) => (         
+           <Award 
+            title={award.title} 
+            description={award.description} 
+            key={award.title}
+            />  
+         ))}
+       </Styled_Awards>   
+      )}
+      
+      
       {/** Developmennt Section */}
-      {project.developments.map((developement) => (
-         <Developments
-          developement={developement}
-        />
-      ))}
+      <Styled_Developments>
+        {project.developments.map((developement) => (
+          <Developments
+            developement={developement}
+          />
+        ))}    
+      </Styled_Developments>
+
       {/** Footer Section */}
-      <Footer
+      <Footer 
         FontAwesomeIcon={FontAwesomeIcon}
         faCopyright={faCopyright}
         faTrademark={faTrademark}
@@ -97,7 +108,7 @@ const Styled_ProjectDetails = styled(motion.div)`
 const Styled_Main = styled.div`
  min-height: 80vh;
  display: flex;
- margin: 5rem 10rem;
+ margin: 2rem 10rem;
  align-items: center;
  justify-content: space-around;
  @media (max-width: 1100px){
@@ -109,6 +120,9 @@ const Styled_Overview = styled(Styled_Main)`
 
 `;
 const Styled_Awards = styled(Styled_Main)`
+
+`;
+const Styled_Developments = styled(Styled_Main)`
 
 `;
 

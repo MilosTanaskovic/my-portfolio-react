@@ -5,12 +5,14 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Video_Demo = (props) => {
- const {title, link, video, poster} = props
+ const {title, demolink, video, githublink, poster} = props
  return (
   <Styled_VideoDemo>
    <h3>{title}</h3>
-   <p>{link}</p>
+   <p><a href={demolink} target="_blank" rel="noopener noreferrer">Open demo in new Window
+      </a> or try it down below</p>
    <video src={video} controls></video>
+   <p><a href={githublink} target="_blank" rel="noopener noreferrer">Find Source Code on GitHub</a></p>
   </Styled_VideoDemo>
  )
 };
@@ -24,6 +26,10 @@ const Styled_VideoDemo = styled.div`
   top: 10%;
   left: 50%;
   transform: translate(-50%, -10%);
+  font-size: 3rem;
+ }
+ p{
+  text-align: center; 
  }
  video{
   width: 100%;

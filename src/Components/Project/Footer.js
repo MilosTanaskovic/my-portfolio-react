@@ -15,7 +15,7 @@ const Footer = (props) => {
 };
 
 const Styled_Footer = styled.div`
-
+  text-align: center;
 `;
 
 export default Footer

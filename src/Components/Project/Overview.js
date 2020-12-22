@@ -12,7 +12,7 @@ const Overview = (props) => {
 }
 
 const Styled_Award = styled.div`
- padding: 5rem;
+ padding: 2rem 5rem;
  h3{
   font-size: 2rem;
  }

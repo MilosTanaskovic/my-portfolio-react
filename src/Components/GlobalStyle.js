@@ -47,6 +47,10 @@ button{
     }
     a{
         font-size: 1.1rem;
+        color: #fffebf;
+    }
+    a:hover {
+        color: #ccc;
     }
     span{
         font-weight: bold;
